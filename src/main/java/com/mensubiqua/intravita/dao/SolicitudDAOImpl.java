@@ -19,11 +19,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class SolicitudDAOImpl implements SolicitudDAO{
 
-    private final String COLLECTION = "solicitudes";
     private final String ID = "_id"; //TODO
 
     public void insert(Solicitud s) {
-        DBBroker.get().insertOne(s, COLLECTION);
+        DBBroker.get().insertOne(s, "solicitudes");
     }
     
     public void update(String solicitante, String solicitado, boolean aceptado)

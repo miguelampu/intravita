@@ -18,12 +18,11 @@ import org.bson.types.ObjectId;
 import org.codehaus.jackson.map.ObjectMapper;
 
 public class DBBroker<T> {
-    private MongoClient client;
     private MongoDatabase db;
 
     private DBBroker(){
         MongoClientURI uri  = new MongoClientURI("mongodb://intravita:intravita@ds113915.mlab.com:13915/intravita");
-        this.client = new MongoClient(uri);
+        MongoClient client = new MongoClient(uri);
         this.db = client.getDatabase(uri.getDatabase());
     }
 
