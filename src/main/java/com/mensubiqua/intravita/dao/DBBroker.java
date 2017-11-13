@@ -39,8 +39,8 @@ public class DBBroker<T> {
 
     public void insertOne(T object, String collection){
         ObjectMapper mapper = new ObjectMapper();
-        String json;
-        Document document;
+        String json = null;
+        Document document = null;
 
         try {
             json = mapper.writeValueAsString(object);

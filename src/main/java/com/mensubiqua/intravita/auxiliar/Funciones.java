@@ -53,7 +53,7 @@ public abstract class Funciones {
     }
     
     public static String encrypt_md5(String password) {
-    	String pass_md5;
+    	String pass_md5 = null;
     	byte[] thedigest = null;
     	
 		try {
